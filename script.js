@@ -1,75 +1,88 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // 1. SMOOTH SCROLL (Navegación suave)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return; // Evitar errores con enlaces vacíos
-            
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) { 
-                targetElement.scrollIntoView({ behavior: 'smooth' }); 
-            }
-        });
-    });
+/**
+ * MEXIA Soluciones - Script de Interactividad
+ * Versión: 2.1 (Corrección de Menú Colapsable)
+ */
 
-    // 2. MATRIX ANIMATION (Optimizada y Responsiva)
-    const canvas = document.getElementById('matrix-canvas');
+document.addEventListener('DOMContentLoaded', () => {
     
+    // --- 1. CONTROL DEL MENÚ MÓVIL (HAMBURGUESA) ---
+    const menuToggle = document.querySelector('#mobile-menu');
+    const navLinks = document.querySelector('#nav-list');
+
+    if (menuToggle && navLinks) {
+        // Evento para abrir/cerrar el menú al tocar la hamburguesa
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active'); // Para animación de la hamburguesa
+        });
+
+        // MUY IMPORTANTE: Cerrar el menú automáticamente al hacer clic en un enlace
+        // Esto evita que el menú siga tapando la información después de navegar
+        const links = document.querySelectorAll('.nav-links a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('is-active');
+            });
+        });
+    }
+
+    // --- 2. EFECTO MATRIX (FONDO DEL HERO) ---
+    const canvas = document.getElementById('matrix-canvas');
     if (canvas) {
         const ctx = canvas.getContext('2d');
         let width, height, columns, drops;
         
-        // Configuración de caracteres Matrix
-        const chars = "MEXIA011010IAWEB"; 
-        const charArray = chars.split('');
         const fontSize = 16;
+        const characters = "01MEXIAIA01"; 
 
-        // Función para inicializar/reiniciar el canvas
-        function initMatrix() {
+        const initMatrix = () => {
+            // Ajustamos al tamaño actual del contenedor Hero
             width = canvas.parentElement.offsetWidth;
             height = canvas.parentElement.offsetHeight;
-            
             canvas.width = width;
             canvas.height = height;
-            
-            columns = Math.ceil(width / fontSize);
-            drops = [];
-            
-            // Llenar el arreglo de gotas
-            for (let x = 0; x < columns; x++) {
-                drops[x] = Math.random() * height; // Iniciar en posiciones aleatorias para que se vea natural
-            }
-        }
 
-        function draw() {
-            // Fondo semitransparente para dejar estela
-            ctx.fillStyle = 'rgba(26, 16, 60, 0.1)'; 
+            columns = Math.floor(width / fontSize);
+            drops = Array(columns).fill(1);
+        };
+
+        const drawMatrix = () => {
+            // Fondo semitransparente para crear el rastro
+            ctx.fillStyle = 'rgba(26, 16, 60, 0.05)';
             ctx.fillRect(0, 0, width, height);
-            
-            ctx.fillStyle = '#00C9A7'; // Color verde neón
-            ctx.font = fontSize + 'px monospace';
-            
+
+            // Estilo de la "lluvia" de letras
+            ctx.fillStyle = '#00C9A7'; // Color de MEXIA
+            ctx.font = `${fontSize}px monospace`;
+
             for (let i = 0; i < drops.length; i++) {
-                const text = charArray[Math.floor(Math.random() * charArray.length)];
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                // Reiniciar la gota al llegar al final de forma aleatoria
+
+                // Reiniciar gota al azar después de salir de pantalla
                 if (drops[i] * fontSize > height && Math.random() > 0.975) {
                     drops[i] = 0;
                 }
                 drops[i]++;
             }
-        }
+        };
 
-        // Iniciar
         initMatrix();
-        setInterval(draw, 50); // Velocidad de caída
-
-        // Evento Resize: Ajustar canvas si cambia el tamaño de la ventana
-        window.addEventListener('resize', () => {
-            initMatrix();
-        });
+        window.addEventListener('resize', initMatrix);
+        setInterval(drawMatrix, 50);
     }
+
+    // --- 3. SCROLL SUAVE PARA ANCLAS ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
