@@ -2,84 +2,68 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Servicios - MEXIA Soluciones</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Apps Móviles - MEXIA</title>
+    <meta name="description" content="Desarrollo de aplicaciones móviles iOS y Android para PyMEs. Apps intuitivas y eficientes.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="estilos.css">
+    <style>
+        .servicio-detalle { padding: 4rem 0; }
+        .beneficios-lista { list-style: none; margin-top: 1rem; }
+        .beneficios-lista li { margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative; }
+        .beneficios-lista li::before { content: "📱"; margin-right: 5px; position: absolute; left: 0; }
+    </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="container nav-container">
-            <a class="logo" href="index.html">
-                <img src="image/Logotipo.jpg" alt="MEXIA Soluciones Logo">
-            </a>
-
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <ul class="nav-links" id="nav-list">
+        <div class="container">
+            <a class="logo" href="index.html"><img src="image/Logotipo.jpg" alt="MEXIA Logo"></a>
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html" class="current">Servicios</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li class="mobile-only">
-                    <a href="contacto.html" class="btn btn-cta">Solicitar Asesoría</a>
-                </li>
             </ul>
-            
-            <a href="contacto.html" class="btn btn-cta desktop-only">Solicitar Asesoría</a>
+            <a href="contacto.html" class="btn btn-cta">Solicitar Asesoría</a>
         </div>
     </nav>
 
-    <header class="hero-short" style="background-color: var(--color-fondo-oscuro); padding: 60px 0; text-align: center; color: white;">
+    <header class="page-hero">
         <div class="container">
-            <h1>Nuestros Servicios</h1>
-            <p>Soluciones integrales de IA y tecnología para tu negocio.</p>
+            <h1>Apps Móviles a Medida</h1>
+            <p class="subtitulo">Lleva tu negocio al bolsillo de tus clientes.</p>
         </div>
     </header>
 
-    <section class="servicios-detalle" style="padding: 60px 0;">
+    <main class="servicio-detalle">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                
-                <div class="servicio-card" style="padding: 30px; border: 1px solid #eee; border-radius: 8px;">
-                    <h3 style="color: var(--acento-titulos); margin-bottom: 15px;">🌐 Desarrollo Web Pro</h3>
-                    <p>Creamos sitios web de alto rendimiento, optimizados para buscadores y totalmente responsivos. Tu ventana al mundo digital con diseño de vanguardia.</p>
+            <div class="servicio-item reverse"> <div class="servicio-item-texto">
+                    <h2>Innovación en la palma de la mano</h2>
+                    <p>Desarrollar una App solía costar millones. Gracias a nuestras metodologías ágiles y asistencia de IA en la codificación, podemos crear aplicaciones funcionales, bonitas y potentes para PyMEs en tiempo récord.</p>
+                    
+                    <h3>Tipos de Apps que desarrollamos:</h3>
+                    <ul class="beneficios-lista">
+                        <li><strong>E-commerce Móvil:</strong> Tiendas para vender productos directamente.</li>
+                        <li><strong>Apps de Gestión:</strong> Para control de inventarios o personal interno.</li>
+                        <li><strong>Apps de Fidelización:</strong> Programas de puntos y recompensas para clientes.</li>
+                        <li><strong>Multiplataforma:</strong> Funcionan en iOS (iPhone) y Android con un solo desarrollo.</li>
+                    </ul>
+                    
+                    <a href="contacto.html" class="btn btn-cta-primary" style="margin-top: 2rem;">Cotizar mi App</a>
                 </div>
-
-                <div class="servicio-card" style="padding: 30px; border: 1px solid #eee; border-radius: 8px;">
-                    <h3 style="color: var(--acento-titulos); margin-bottom: 15px;">🤖 Implementación de IA</h3>
-                    <p>Integramos agentes inteligentes y automatización de procesos para reducir costos operativos y mejorar la atención a tus clientes 24/7.</p>
+                <div class="servicio-item-imagen">
+                    <img src="image/automatizacion-2026.jpg" alt="Desarrollo de Apps">
                 </div>
-
-                <div class="servicio-card" style="padding: 30px; border: 1px solid #eee; border-radius: 8px;">
-                    <h3 style="color: var(--acento-titulos); margin-bottom: 15px;">📊 Consultoría Digital</h3>
-                    <p>Te acompañamos en la ruta de transformación digital de tu PyME, diagnosticando oportunidades de mejora con herramientas tecnológicas.</p>
-                </div>
-
             </div>
         </div>
-    </section>
+    </main>
 
     <footer class="footer">
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2026 MEXIA Soluciones. Todos los derechos reservados.</p>
+        <div class="container">
+            <div class="footer-bottom"><p>Copyright © 2025 MEXIA Soluciones</p></div>
         </div>
     </footer>
-
-    <a href="https://wa.me/525536573125" class="btn-whatsapp" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
-        </svg>
-    </a>
-
-    <script src="script.js"></script>
 </body>
 </html>
