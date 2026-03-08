@@ -14,76 +14,84 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <a class="logo" href="index.html">
-                <img src="image/Logotipo.jpg" alt="MEXIA Soluciones Logo">
-            </a>
+<nav class="navbar">
+    <div class="container">
+        <a class="logo" href="index.html">
+            <img src="image/Logotipo.jpg" alt="MEXIA Soluciones Logo">
+        </a>
 
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-            <ul class="nav-links">
-                <li><a href="index.html" class="current">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li class="nav-cta-mobile"><a href="contacto.html" class="btn btn-cta">Asesoría</a></li>
-            </ul>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html" class="current">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
 
-            <a href="contacto.html" class="btn btn-cta nav-cta-desktop">Solicitar Asesoría</a>
-        </div>
-    </nav>
+        <a href="contacto.html" class="btn btn-cta">Solicitar Asesoría</a>
+    </div>
+</nav>
 
-    <header class="hero">
-        <div id="matrix-container">
-            <canvas id="matrix-canvas"></canvas>
-        </div>
+    <header class="page-hero hero">
+        <canvas id="matrix-canvas"></canvas>
+        
         <div class="container hero-content">
-            <h1>Impulsamos tu Negocio con <span class="text-gradient">Inteligencia Artificial</span></h1>
-            <p class="subtitulo">Transformamos PyMEs mediante soluciones digitales avanzadas, desde desarrollo web hasta automatización con IA.</p>
-            <div class="hero-btns">
-                <a href="#servicios" class="btn btn-primary">Nuestros Servicios</a>
-                <a href="contacto.html" class="btn btn-secondary">Hablar con un Experto</a>
+            <h1>Transformamos tu PyME con <br><span>Inteligencia Artificial</span></h1>
+            <p>Automatización, Desarrollo Web y Estrategia Digital para negocios que quieren crecer sin complicaciones técnicas.</p>
+            <div class="hero-buttons">
+                <a href="contacto.html" class="btn btn-cta">Solicitar Asesoría</a>
+                <a href="servicios.html" class="btn btn-secondary">Ver Servicios</a>
             </div>
         </div>
     </header>
 
-    <section id="servicios" class="servicios">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones tecnológicas diseñadas para el crecimiento real.</p>
+    <section class="container" style="padding: 4rem 2rem; text-align: center;">
+        <h2>Impulsa tu negocio al siguiente nivel</h2>
+        <p style="max-width: 700px; margin: 0 auto 2rem; color: #555;">
+            No necesitas ser un experto en tecnología. Nosotros nos encargamos de digitalizar tu empresa para que tú te enfoques en vender más.
+        </p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
+            <div style="flex: 1; min-width: 250px; padding: 2rem; background: #F8F9FA; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <h3>Automatización</h3>
+                <p>Reduce costos y errores automatizando tareas repetitivas con IA.</p>
             </div>
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <h3>Consultoría en IA</h3>
-                    <p>Implementamos herramientas de Inteligencia Artificial para optimizar tus procesos operativos.</p>
-                </div>
-                <div class="servicio-card">
-                    <h3>Desarrollo Web</h3>
-                    <p>Sitios web de alto impacto, rápidos y optimizados para convertir visitantes en clientes.</p>
-                </div>
-                <div class="servicio-card">
-                    <h3>Apps Móviles</h3>
-                    <p>Creamos aplicaciones personalizadas que conectan tu marca con los usuarios en cualquier lugar.</p>
-                </div>
+            <div style="flex: 1; min-width: 250px; padding: 2rem; background: #F8F9FA; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <h3>Desarrollo Web</h3>
+                <p>Sitios modernos y rápidos que convierten visitantes en clientes.</p>
             </div>
+            <div style="flex: 1; min-width: 250px; padding: 2rem; background: #F8F9FA; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <h3>Consultoría Digital</h3>
+                <p>Estrategias a la medida para posicionar tu marca en internet.</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <a href="servicios.html" class="btn btn-secondary" style="margin:0;">Explorar todos los servicios</a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <img src="image/Logotipo.jpg" alt="MEXIA Logo" class="footer-logo">
-                    <p>Liderando la democratización tecnológica para PyMEs en México y Latinoamérica.</p>
+            <div class="footer-contenido">
+                
+                <div style="flex: 1; min-width: 200px;">
+                    <img src="image/Logotipo.jpg" alt="MEXIA Logo Footer" class="footer-logo">
                 </div>
-                <div class="footer-links">
+
+                <div class="footer-contacto" style="flex: 1; min-width: 200px;">
+                    <h4>Contacto</h4>
+                    <p>Email: <a href="mailto:contacto@mexia.digital">contacto@mexia.digital</a></p>
+                    <p>Tel: <a href="tel:5536573125">55 3657 3125</a></p>
+                </div>
+
+                <div class="footer-links" style="flex: 1; min-width: 200px;">
                     <h4>Navegación</h4>
                     <ul>
                         <li><a href="servicios.html">Servicios</a></li>
@@ -107,5 +115,6 @@
     </a>
 
     <script src="script.js"></script>
+
 </body>
 </html>
