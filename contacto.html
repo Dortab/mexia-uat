@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXIA Soluciones - Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <img src="image/Logotipo.jpg" alt="MEXIA Soluciones Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html" class="current">Contacto</a></li>
+            </ul>
+            <a href="contacto.html" class="btn btn-cta">Solicitar Asesoría</a>
+        </div>
+    </nav>
+
+    <header class="page-hero-internal">
+        <div class="container">
+            <h1>Hablemos de tu Proyecto</h1>
+            <p class="subtitulo">Estamos listos para escuchar tus ideas</p>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 3rem 0; max-width: 600px;">
+        <div style="background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+            
+            <form action="#" method="POST"> 
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: 600;">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required 
+                           style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="telefono" style="display: block; margin-bottom: 5px; font-weight: 600;">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required 
+                           placeholder="Ej: 5512345678"
+                           pattern="[0-9]+"
+                           title="Por favor ingresa solo números"
+                           oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                           style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                    <small style="color: #666; font-size: 0.8rem;">Solo se aceptan números.</small>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="nombre@empresa.com"
+                           style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="mensaje" style="display: block; margin-bottom: 5px; font-weight: 600;">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required
+                              style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-cta" style="width: 100%;">Enviar Mensaje</button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 2.5rem; border-top: 1px solid #eee; padding-top: 2rem;">
+                <p style="margin-bottom: 1rem; color: #666;">O contáctanos directo:</p>
+                
+                <div style="margin-bottom: 1rem;">
+                    <a href="https://wa.me/525536573125" target="_blank" style="color: var(--acento-cta); font-weight: 700; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/>
+                        </svg>
+                        +52 55 3657 3125
+                    </a>
+                </div>
+
+                <div>
+                    <a href="mailto:contacto@mexia.digital" style="color: var(--color-texto-oscuro); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                        </svg>
+                        contacto@mexia.digital
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: var(--color-fondo-oscuro); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 MEXIA Soluciones.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
